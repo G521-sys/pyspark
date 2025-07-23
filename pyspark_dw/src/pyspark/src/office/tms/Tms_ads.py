@@ -27,7 +27,7 @@ def main():
     print(f"===== 执行日期: 2025-07-12 =====")
 
     # 3. 切换数据库
-    spark.sql("use tms01;")
+    spark.sql("use tms;")
 
     # 4. 封装插入+校验函数（减少重复代码，增加错误捕获）
     def load_and_verify(target_table, insert_sql):
