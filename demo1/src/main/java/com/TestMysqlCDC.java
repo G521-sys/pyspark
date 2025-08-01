@@ -1,19 +1,15 @@
 package com;
 
 
-import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
-
-import java.util.Properties;
-
 public class TestMysqlCDC {
     public static void main(String[] args) {
-        StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
-        Properties debeziumProperties = new Properties();
-        debeziumProperties.put("snapshot.mode", "initial");
-        debeziumProperties.put("database.history.store.only.monitored.tables.ddl", "true");
-// MySQL特殊配置：开启gtid模式（如果MySQL启用了GTID）
-        // debeziumProperties.put("database.serverTimezone", "UTC");
-        // debeziumProperties.put("database.gtid.mode", "enable");
+//        StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+//        Properties debeziumProperties = new Properties();
+//        debeziumProperties.put("snapshot.mode", "initial");
+//        debeziumProperties.put("database.history.store.only.monitored.tables.ddl", "true");
+//// MySQL特殊配置：开启gtid模式（如果MySQL启用了GTID）
+//         debeziumProperties.put("database.serverTimezone", "UTC");
+//         debeziumProperties.put("database.gtid.mode", "enable");
 //        DebeziumSourceFunction<String> mySqlSource = MySqlSource.<String>builder()
 //                .hostname("192.168.200.128") // MySQL主机地址
 //                .port(3306) // MySQL端口号，默认3306
@@ -29,8 +25,8 @@ public class TestMysqlCDC {
 //
 //        // 打印输出结果
 //        dataStreamSource.print().setParallelism(1);
-
-        // 缺少的步骤：执行Flink作业
+//
+//        // 缺少的步骤：执行Flink作业
 //        env.execute("MySQL CDC Test");
     }
 }
