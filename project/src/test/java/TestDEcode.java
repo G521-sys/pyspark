@@ -27,7 +27,7 @@ public class TestDEcode {
         System.out.println("长度: " + encrypted.length + " 字节");
         System.out.println("Hex: " + DataSecureUtils.bytesToHex(encrypted));
 
-//        String decrypted = crypto.decrypt(encrypted);
-//        System.err.println(decrypted);
+        String decrypted = crypto.decrypt(encrypted);
+        System.err.println(decrypted);
     }
 }
