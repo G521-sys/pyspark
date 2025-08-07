@@ -4,6 +4,8 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/demo1/stream-realtime/pom.xml" />
+        <option value="$PROJECT_DIR$/realtime/pom.xml" />
       </list>
     </option>
   </component>
